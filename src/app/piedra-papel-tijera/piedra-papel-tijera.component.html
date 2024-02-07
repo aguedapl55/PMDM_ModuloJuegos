@@ -1,0 +1,63 @@
+<div class="main">
+    
+    <div class="player usuario">
+        <div class="lives">
+            <div *ngIf="vidasP>0; else drop" class="heart"></div>
+            <div *ngIf="vidasP>1; else drop" class="heart"></div>
+            <div *ngIf="vidasP>2; else drop" class="heart"></div>
+            <div *ngIf="vidasP>3; else drop" class="heart"></div>
+            <div *ngIf="vidasP>4; else drop" class="heart"></div>
+        </div>
+    </div>
+    
+    <div class="contenedor_general">
+        
+        <div class="consola">
+            <div class="imgscons">
+                
+                <div *ngIf="p=='rock'; else vacio" class="elecc piedra"></div>
+                <div *ngIf="p=='paper'; else vacio" class="elecc papel"></div>
+                <div *ngIf="p=='scissors'; else vacio" class="elecc tijeras"></div>
+                
+                <div *ngIf="m=='rock'; else vacio" class="elecc piedra"></div>
+                <div *ngIf="m=='paper'; else vacio" class="elecc papel"></div>
+                <div *ngIf="m=='scissors'; else vacio" class="elecc tijeras"></div>
+            
+            </div>
+
+            <div class="winner">
+                <div *ngIf="s=='winner'; else vacio" class="win"></div>
+                <div *ngIf="s=='tie'; else vacio" class="tie"></div>
+                <div *ngIf="s=='loser'; else vacio" class="lose"></div>
+            </div>
+
+        </div>
+        
+        <div class="selecciones">
+            <div *ngIf="vidasM>0 || vidasP>0; else vacio" (click)="elegir('rock')" class="eleccion piedra"></div>
+            <div *ngIf="vidasM>0 || vidasP>0; else vacio" (click)="elegir('paper')" class="eleccion papel"></div>
+            <div *ngIf="vidasM>0 || vidasP>0; else vacio" (click)="elegir('scissors')" class="eleccion tijeras"></div>
+        </div>
+        <button *ngIf="vidasM<=0 || vidasP<=0; else vacio" onclick="replay()" class="replay">REPLAY</button>
+        
+    </div>
+
+    <div class="player maquina">
+        <div class="lives">
+            <div *ngIf="vidasM>0; else drop" class="heart"></div>
+            <div *ngIf="vidasM>1; else drop" class="heart"></div>
+            <div *ngIf="vidasM>2; else drop" class="heart"></div>
+            <div *ngIf="vidasM>3; else drop" class="heart"></div>
+            <div *ngIf="vidasM>4; else drop" class="heart"></div>
+        </div>
+    </div>
+
+</div>
+
+<ng-template #vacio>
+    <div></div>
+</ng-template>
+
+<ng-template #drop>
+    <div class="heart vacio"></div>
+</ng-template>

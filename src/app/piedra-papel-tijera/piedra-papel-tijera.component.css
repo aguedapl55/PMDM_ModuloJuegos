@@ -1,0 +1,219 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: mediumpurple;
+    align-items: center;
+}
+
+.contenedor_general {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.consola {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    background-color: gray;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+    .imgscons {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: 100px;
+    }
+
+        .elecc {
+            width: 100px;
+            height: 100px;
+            animation: slide_up .5s ;
+        }
+        
+    .winner {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        height: 100px;
+        justify-content: center;
+    }
+    
+    .win {
+        width: 100px;
+        height: 100px;
+        background-image: url('../../assets/piedrapapeltijera/winner.png');
+        background-size: contain;
+        animation: slide_up 2.5s;
+    }
+
+    .tie {
+        width: 100px;
+        height: 100px;
+        background-image: url('../../assets/piedrapapeltijera/tie.png');
+        background-size: contain;
+        animation: slide_up 2.5s;
+    }
+    
+    .lose {
+        width: 100px;
+        height: 100px;
+        background-image: url('../../assets/piedrapapeltijera/loser.png');
+        background-size: contain;
+        animation: slide_up 2.5s;
+    }
+
+.player {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+        .lives {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            justify-content: center;
+            margin-top: 205px;
+            animation: slide_up 2s forwards;
+        }
+
+            .heart {
+                width: 25px;
+                height: 25px;
+                background-image: url('../../assets/piedrapapeltijera/heart.png');
+                background-size: cover;
+            }
+
+
+
+    .usuario {
+        background-image: url('../../assets/piedrapapeltijera/user.png');
+        background-size: cover;
+        animation: slide_left 2s forwards;
+    }
+
+    .maquina {
+        background-image: url('../../assets/piedrapapeltijera/bot.png');
+        background-size: cover;
+        animation: slide_right 2s forwards;
+    } 
+
+.selecciones {
+    width: 300px;
+    height: 100px;
+    background-color: gray;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+    .eleccion {
+        float: left;
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+    }
+
+        .piedra {
+            background-image: url('../../assets/piedrapapeltijera/rock.png');
+            background-size: contain;
+        }
+
+        .papel {
+            background-image: url('../../assets/piedrapapeltijera/paper.png');
+            background-size: contain;
+        }
+
+        .tijeras {
+            background-image: url('../../assets/piedrapapeltijera/scissors.png');
+            background-size: contain;
+        }
+
+        .eleccion:hover {
+            cursor: pointer;
+            animation: latir 1s infinite;
+        }
+
+    .replay {
+        width: 75px;
+        height: 50px;
+    }
+
+.vacio {
+    animation: drop 2s 1s forwards;
+
+}
+
+@keyframes latir {
+    0% {
+        
+    } 50% {
+        transform: scale(1.2);
+    } 100% {
+
+    }
+}
+
+@keyframes slide_left {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0%;
+    } 100% {
+        transform: translate(150px, 0px);
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0%;
+    } 100% {
+        transform: translate(-150px, 0px);
+    }
+}
+
+@keyframes slide_up {
+    0% {
+       opacity: 0%;
+    } 75% {
+        transform: translate(0%, 2vh);
+        opacity: 0%;
+    } 100% {
+
+    }
+}
+
+@keyframes drop {
+    0% {
+    } 25% {
+        transform: translate(0%, 1.5vh);
+        opacity: 0%;
+    } 100% {
+         opacity: 0%;
+ 
+     }
+}
+
+@media only screen and (max-width:500px) {
+    .consola {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .consola {
+        width: 300px;
+    }
+}

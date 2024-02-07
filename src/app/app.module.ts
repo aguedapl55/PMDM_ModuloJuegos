@@ -8,12 +8,16 @@ import { MenuInicialComponent } from './menu-inicial/menu-inicial.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatProgressBar } from '@angular/material/progress-bar';
+import { MatProgressBar, MatProgressBarModule } from '@angular/material/progress-bar';
+import { PiedraPapelTijeraComponent } from './piedra-papel-tijera/piedra-papel-tijera.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuInicialComponent
+    MenuInicialComponent,
+    PiedraPapelTijeraComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,7 @@ import { MatProgressBar } from '@angular/material/progress-bar';
     MatToolbarModule, 
     MatIconModule, 
     MatTabsModule, 
-    MatProgressBar
+    MatProgressBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
