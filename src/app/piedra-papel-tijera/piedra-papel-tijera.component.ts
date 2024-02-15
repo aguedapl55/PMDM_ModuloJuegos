@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-piedra-papel-tijera',
@@ -44,9 +45,6 @@ export class PiedraPapelTijeraComponent {
   }
 
   replay() {
-    //no entiendo del todo como hacer esto, he visto en internet que 
-      //window.location.reload() deberia funcionar, pero no funciona por alguna razon
     window.location.reload();
-    this.ngOnInit();    
   }
 }
