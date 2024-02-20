@@ -9,7 +9,10 @@
         <div *ngIf="fallos > 2; else vacio" class="cross"></div>
     </div>
     <div class="letters">
-        <h1></h1>
+        <app-ahorcado-letra class="letra" *ngFor="let char of abecedario"
+            [nombre]="char"
+            [imagen]="'../../assets/ahorcado/letras/' + char + '.png'"
+        ></app-ahorcado-letra>
     </div>
 </div>
 

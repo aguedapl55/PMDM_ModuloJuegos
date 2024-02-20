@@ -12,6 +12,7 @@ export class AhorcadoComponent implements OnInit {
   posiblesPalabras:string[] = ["manzana", "pera", "sandia", "melon", "uvas", "ciruela", "mango", "aguacate", "tomate", "patata", "lechuga", "ajo", "cebolla"];
   abecedario:string[] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   charsPalabra:string[] = [];
+  charsGuessed:string[] = [];
 
   ngOnInit(): void {
       this.fallos = 0;
@@ -21,7 +22,13 @@ export class AhorcadoComponent implements OnInit {
   }
 
   recibirLetra(char:string) {
-    this.charsPalabra.push(char);
+    this.charsGuessed.push(char);
+    
+    if (this.charsPalabra.includes(char)) {
+      this.charsPalabra.forEach(c => {
+        
+      })
+    }
     //this.array.includes devuelve true si contiene un elemento
   }
 }
