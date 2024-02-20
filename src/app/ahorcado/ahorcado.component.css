@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightgoldenrodyellow;
+    align-items: center;
+}
+
+.word {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.mistakes {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: center;
+    margin-top: 205px;
+    animation: slide_up 2s forwards;
+}
+
+    .cross {
+        width: 25px;
+        height: 25px;
+        background-image: url('../../assets/ahorcado/red-cross.png');
+        background-size: cover;
+    }

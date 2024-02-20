@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './piedra-papel-tijera.component.html',
   styleUrls: ['./piedra-papel-tijera.component.css']
 })
-export class PiedraPapelTijeraComponent {
+export class PiedraPapelTijeraComponent implements OnInit {
   p:string = "";
   m:string = "";
   s:string = "";

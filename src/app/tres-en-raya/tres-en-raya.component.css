@@ -1,0 +1,26 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    align-items: center;
+}
+
+.player {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+    .usuario {
+        background-image: url('../../assets/tresenraya/user.png');
+        background-size: cover;
+        animation: slide_left 2s forwards;
+    }
+
+    .maquina {
+        background-image: url('../../assets/tresenraya/bot.png');
+        background-size: cover;
+        animation: slide_right 2s forwards;
+    } 

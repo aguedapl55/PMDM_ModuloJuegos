@@ -11,13 +11,19 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatProgressBar, MatProgressBarModule } from '@angular/material/progress-bar';
 import { PiedraPapelTijeraComponent } from './piedra-papel-tijera/piedra-papel-tijera.component';
 import { Error404Component } from './error404/error404.component';
+import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
+import { AhorcadoComponent } from './ahorcado/ahorcado.component';
+import { AhorcadoLetraComponent } from './ahorcado-letra/ahorcado-letra.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuInicialComponent,
     PiedraPapelTijeraComponent,
-    Error404Component
+    Error404Component,
+    TresEnRayaComponent,
+    AhorcadoComponent,
+    AhorcadoLetraComponent
   ],
   imports: [
     BrowserModule,
