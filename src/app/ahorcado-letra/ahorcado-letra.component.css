@@ -1,4 +1,33 @@
-img {
+.foto {
     height: 100px;
     width: 100px;
+}
+
+.foto:hover {
+    cursor:pointer;
+    animation: latido 2s infinite;
+}
+
+.foto:click {
+    animation: bounce 1s forwards;
+}
+
+@keyframes latido {
+    0% {
+
+    } 50% {
+        transform: scale(85%);
+    } 100% {
+
+    }
+}
+
+@keyframes bounce {
+    0% {
+
+    } 50% {
+        transform: scale(120%);
+    } 100% {
+        transform: 100%;
+    }
 }

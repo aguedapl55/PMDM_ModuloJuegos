@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuInicialComponent } from './menu-inicial/menu-inicial.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -14,16 +13,19 @@ import { Error404Component } from './error404/error404.component';
 import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
 import { AhorcadoComponent } from './ahorcado/ahorcado.component';
 import { AhorcadoLetraComponent } from './ahorcado-letra/ahorcado-letra.component';
+import { ProyectoComponent } from './proyecto/proyecto.component';
+import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuInicialComponent,
     PiedraPapelTijeraComponent,
     Error404Component,
     TresEnRayaComponent,
     AhorcadoComponent,
-    AhorcadoLetraComponent
+    AhorcadoLetraComponent,
+    ProyectoComponent,
+    DesarrolladorComponent
   ],
   imports: [
     BrowserModule,

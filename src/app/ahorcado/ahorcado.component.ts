@@ -19,6 +19,7 @@ export class AhorcadoComponent implements OnInit {
       this.palabra = this.posiblesPalabras[Math.floor(Math.random()*this.posiblesPalabras.length)];
       console.log("PALABRA ESCOGIDA: " + this.palabra);
       this.charsPalabra = this.palabra.split("");
+      
   }
 
   recibirLetra(char:string) {
@@ -26,7 +27,7 @@ export class AhorcadoComponent implements OnInit {
     
     if (this.charsPalabra.includes(char)) {
       this.charsPalabra.forEach(c => {
-        
+        if (c == char) this.charsPalabra.push(c)
       })
     }
     //this.array.includes devuelve true si contiene un elemento

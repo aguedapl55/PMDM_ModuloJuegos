@@ -7,6 +7,8 @@
         <div *ngIf="fallos > 0; else vacio" class="cross"></div>
         <div *ngIf="fallos > 1; else vacio" class="cross"></div>
         <div *ngIf="fallos > 2; else vacio" class="cross"></div>
+        <div *ngIf="fallos > 3; else vacio" class="cross"></div>
+        <div *ngIf="fallos > 4; else vacio" class="cross"></div>
     </div>
     <div class="letters">
         <app-ahorcado-letra class="letra" *ngFor="let char of abecedario"
@@ -15,6 +17,10 @@
         ></app-ahorcado-letra>
     </div>
 </div>
+
+<ng-template #underscore>
+    <h1>_</h1>
+</ng-template>
 
 <ng-template #vacio>
     <div></div>

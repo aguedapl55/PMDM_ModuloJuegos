@@ -1,0 +1,52 @@
+<div class="main">
+    <div class="header">
+        <h1>Águeda Prieto Llamas</h1>
+        <q>Estudiante de segundo curso de formación profesional de Desarrollo de Aplicaciones Multiplataforma</q>
+    </div>
+    <hr>
+    <div class="body">
+        <div class="mainbody">
+            <div class="educform">
+                <h2>Educación y formación</h2>
+                <div class="elemento educacion" *ngFor="let educ of listaEducForm">
+                    <h3>{{educ.titulo}}</h3>
+                    <h4>{{educ.espaciotiempo}}</h4>
+                    <p>{{educ.desc}}</p>
+                </div>
+            </div>
+            <div class="cursos">
+                <h2>Cursos</h2>
+                <div class="elemento curso" *ngFor="let curs of listaCursos">
+                    <h3>{{curs.titulo}}</h3>
+                    <h4>{{curs.espaciotiempo}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="extras">
+            <div class="compdig">
+                <h2>Competencias digitales</h2>
+                <li class="elemento compdig" *ngFor="let cd of listaCompDig">{{cd}}</li>
+            </div>
+            <div class="idiomas">
+                <h2>Idiomas</h2>
+                <div class="elemento idioma" *ngFor="let id of listaIdiomas">
+                    <h3>{{id.titulo}}</h3>
+                    <h4>{{id.desc}}</h4>
+                </div>
+            </div>
+            <div class="masinfo">
+                <h2>Información adicional</h2>
+                <div class="elemento masinfo" *ngFor="let info of listaInfo">
+                    <h3>{{info.titulo}}</h3>
+                    <h4>{{info.desc}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        <p>aplodeivo@gmail.com</p>
+        <p>Oviedo, España</p>
+        <p>30/08/2004</p>
+    </div>
+</div>
