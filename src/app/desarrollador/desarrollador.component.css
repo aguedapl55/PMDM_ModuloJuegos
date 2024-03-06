@@ -1,18 +1,58 @@
-main {
+.main {
 
 }
 
-header {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: violet;
 }
 
-body {
+    h1 {
+        font-size: 500%;
+        font-weight: bold;
+        color: whitesmoke;
+        padding-top: 50px;
+        text-align: center;
+        }
 
+    q {
+        color: whitesmoke;
+        text-align: center;
+        font-size: 200%;
+        font-style: italic;
+        padding: 25px;
+    }
+
+.body {
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    background-color: lavenderblush;
 }
 
-footer {
+    h2 {
+        display: block;
+    } 
 
+    h3 {
+
+    }
+
+    h4 {
+
+    }
+
+.footer {
+    padding-top: 10px;
+    font-size: 150%;
+    color: whitesmoke;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: violet;
 }
 

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: lightgoldenrodyellow;
-    width: 100%;
+    width: 100vw;
 }
 
 .word {
@@ -12,6 +12,11 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+    h1 {
+        padding: 50px;
+        font-size: 500%;
+    }
 
 .mistakes {
     display: flex;
@@ -29,13 +34,21 @@
         background-size: cover;
     }
 
-.letters {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow-x: scroll;
+.adivinar {
+    padding: 25px;
 }
 
-    .letra {
-        margin-left: 25px;
+    .boton {
+        font-size: 500%;
     }
+
+    .letters {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+        .letra {
+            margin-left: 25px;
+        }

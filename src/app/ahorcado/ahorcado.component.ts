@@ -8,28 +8,51 @@ import { Component, OnInit } from '@angular/core';
 export class AhorcadoComponent implements OnInit {
   fallos:number = 0;
   palabra:string = "";
+  char:string ="";
 
-  posiblesPalabras:string[] = ["manzana", "pera", "sandia", "melon", "uvas", "ciruela", "mango", "aguacate", "tomate", "patata", "lechuga", "ajo", "cebolla"];
+  posiblesPalabras:string[] = ["MANZANA", "PERA", "SANDIA", "MELON", "UVAS", "CIRUELA", "MANGO", "AGUACATE", "TOMATE", "PATATA", "LECHUGA", "AJO", "CEBOLLA"];
   abecedario:string[] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   charsPalabra:string[] = [];
   charsGuessed:string[] = [];
-
+  aux:string[] = []
+  
   ngOnInit(): void {
-      this.fallos = 0;
-      this.palabra = this.posiblesPalabras[Math.floor(Math.random()*this.posiblesPalabras.length)];
-      console.log("PALABRA ESCOGIDA: " + this.palabra);
-      this.charsPalabra = this.palabra.split("");
-      
+    this.abecedario = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    this.fallos = 0;
+    this.palabra = this.posiblesPalabras[Math.floor(Math.random()*this.posiblesPalabras.length)];
+    console.log("PALABRA ESCOGIDA: " + this.palabra);
+    this.charsPalabra = this.palabra.split("");
+    this.charsPalabra.forEach(c => {
+      this.charsGuessed.push("?");
+    })
   }
 
   recibirLetra(char:string) {
-    this.charsGuessed.push(char);
-    
+    this.char = char.toUpperCase();
+  }
+
+  adivinarLetra(char:string) {  
+    this.abecedario.forEach(c => {
+      if (c.toUpperCase()!=char) this.aux.push(c);
+    });
+    this.abecedario = this.aux
+    this.aux = [];
     if (this.charsPalabra.includes(char)) {
       this.charsPalabra.forEach(c => {
-        if (c == char) this.charsPalabra.push(c)
+        c == char ? this.aux.push(c) : this.aux.push("?")
       })
+      for (let i = 0; i<this.charsGuessed.length; i++) {
+        this.charsGuessed[i] == "?" ? this.charsGuessed[i] = this.aux[i] : null
+      }
+    } else {
+      this.fallos++;
     }
-    //this.array.includes devuelve true si contiene un elemento
+    this.aux = [];
+    this.char = "";
+  }
+
+  replay() {
+    window.location.reload();
+    this.ngOnInit()
   }
 }
