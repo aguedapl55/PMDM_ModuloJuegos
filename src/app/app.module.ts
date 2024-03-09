@@ -16,6 +16,7 @@ import { AhorcadoLetraComponent } from './ahorcado-letra/ahorcado-letra.componen
 import { ProyectoComponent } from './proyecto/proyecto.component';
 import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
 import { TresEnRayaTileComponent } from './tres-en-raya-tile/tres-en-raya-tile.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TresEnRayaTileComponent } from './tres-en-raya-tile/tres-en-raya-tile.c
     AhorcadoLetraComponent,
     ProyectoComponent,
     DesarrolladorComponent,
-    TresEnRayaTileComponent
+    TresEnRayaTileComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,

@@ -6,8 +6,10 @@ import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
 import { AhorcadoComponent } from './ahorcado/ahorcado.component';
 import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
 import { ProyectoComponent } from './proyecto/proyecto.component';
+import { LandingComponent } from './landing/landing.component';
 
 const routes: Routes = [
+  {path: '', component: LandingComponent},
   {path: 'desarrollador', component: DesarrolladorComponent}, 
   {path: 'proyecto', component: ProyectoComponent},
   {path: 'piedra-papel-tijera', component: PiedraPapelTijeraComponent},

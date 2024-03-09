@@ -1,3 +1,7 @@
-<div class="tile">
-    <button (click)="enviarDatos()">{{value}}</button>
+<div class="tiles">
+    <button class="tile" *ngIf="value != '_'; else available">{{value}}</button>
 </div>
+
+<ng-template #available>
+    <button class="tile" (click)="enviarDatos()">_</button>
+</ng-template>

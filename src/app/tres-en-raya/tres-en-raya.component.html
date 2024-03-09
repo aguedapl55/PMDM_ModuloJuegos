@@ -3,10 +3,18 @@
 
     </div>
     <div class="consola">
-        <app-tres-en-raya-tile class="tile" *ngFor="let c of availableTiles"
-        [name]="c" [value]="placeholder"></app-tres-en-raya-tile> 
+        <div class="tiles">
+            <app-tres-en-raya-tile class="tile" *ngFor="let c of tiles"
+            [name]="c" [value]="values[c]" (datos)="recibirLetra($event)"></app-tres-en-raya-tile> 
+        </div>
+        <h1 *ngIf="win; else vacio">{{winner}}</h1>
+        <button *ngIf="win" class="boton" (click)="replay()">REPLAY</button>
     </div>
     <div class="player maquina">
         
     </div>
 </div>
+
+<ng-template #vacio>
+    <div></div>
+</ng-template>
