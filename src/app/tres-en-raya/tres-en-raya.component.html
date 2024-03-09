@@ -3,7 +3,10 @@
 
     </div>
     <div class="consola">
-
+        <app-tres-en-raya-tile class="tile" *ngFor="let c of availableTiles"
+        [name]="c" [value]="placeholder"></app-tres-en-raya-tile> 
     </div>
-    <div class="player maquina"></div>
+    <div class="player maquina">
+        
+    </div>
 </div>

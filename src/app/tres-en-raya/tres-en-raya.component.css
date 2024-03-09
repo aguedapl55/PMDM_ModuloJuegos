@@ -24,3 +24,8 @@
         background-size: cover;
         animation: slide_right 2s forwards;
     } 
+
+.consola {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

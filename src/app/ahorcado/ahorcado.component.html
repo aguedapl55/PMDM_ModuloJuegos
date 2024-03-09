@@ -3,7 +3,7 @@
         <h1 *ngFor="let char of charsGuessed"
         >{{char}}</h1> 
     </div>
-    <h1 *ngIf="charsGuessed===charsPalabra && fallos<5; else vacio" class="win">¡Ganaste!</h1>
+    <h1 *ngIf="auxbool == true && fallos<5; else vacio" class="respuesta">¡Ganaste!</h1>
     <h1 *ngIf="fallos == 5; else vacio" class="respuesta">¡Has perdido! La palabra era {{palabra}}</h1>
     <div class="mistakes">
         <div *ngIf="fallos > 0; else vacio" class="cross"></div>
@@ -12,10 +12,10 @@
         <div *ngIf="fallos > 3; else vacio" class="cross"></div>
         <div *ngIf="fallos > 4; else vacio" class="cross"></div>
     </div>
-    <button *ngIf="fallos>4 || charsGuessed == charsPalabra" class="boton" (click)="replay()">REPLAY</button>
+    <button *ngIf="fallos>4 || this.auxbool" class="boton" (click)="replay()">REPLAY</button>
     <button *ngIf="char.length != 0 && fallos<5; else vacio" class="boton" (click)="adivinarLetra(this.char)">ADIVINAR LETRA : {{char}}</button>
     <div class="adivinar">
-        <div class="letters">
+        <div class="letters" *ngIf="fallos < 5 && !auxbool; else vacio">
             <app-ahorcado-letra class="letra" *ngFor="let char of abecedario"
             [nombre]="char"
             [imagen]="'../../assets/ahorcado/letras/' + char + '.png'"

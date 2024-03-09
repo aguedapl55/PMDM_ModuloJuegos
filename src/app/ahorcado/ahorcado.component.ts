@@ -15,6 +15,7 @@ export class AhorcadoComponent implements OnInit {
   charsPalabra:string[] = [];
   charsGuessed:string[] = [];
   aux:string[] = []
+  auxbool:boolean = false;
   
   ngOnInit(): void {
     this.abecedario = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -49,10 +50,24 @@ export class AhorcadoComponent implements OnInit {
     }
     this.aux = [];
     this.char = "";
+
+    this.iguales();
   }
 
   replay() {
     window.location.reload();
     this.ngOnInit()
+  }
+
+  iguales() {
+    let auxnum = 0;
+    for (let i = 0; i<this.charsPalabra.length; i++) {
+      if (this.charsPalabra[i] == this.charsGuessed[i]) {
+        auxnum++;
+      }
+    }
+    if (auxnum == this.charsPalabra.length)
+    this.auxbool = true;
+  console.log("this.auxbool " + this.auxbool)
   }
 }
