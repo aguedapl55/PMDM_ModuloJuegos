@@ -17,6 +17,7 @@ import { ProyectoComponent } from './proyecto/proyecto.component';
 import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
 import { TresEnRayaTileComponent } from './tres-en-raya-tile/tres-en-raya-tile.component';
 import { LandingComponent } from './landing/landing.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -34,11 +35,12 @@ import { LandingComponent } from './landing/landing.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
-    MatToolbarModule, 
-    MatIconModule, 
-    MatTabsModule, 
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTabsModule,
     MatProgressBarModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

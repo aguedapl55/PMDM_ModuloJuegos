@@ -1,7 +1,6 @@
 <div class="main">
     <div class="word">
-        <h1 *ngFor="let char of charsGuessed"
-        >{{char}}</h1> 
+        <h1 *ngFor="let char of charsGuessed">{{char}}</h1>
     </div>
     <h1 *ngIf="auxbool == true && fallos<5; else vacio" class="respuesta">¡Ganaste!</h1>
     <h1 *ngIf="fallos == 5; else vacio" class="respuesta">¡Has perdido! La palabra era {{palabra}}</h1>
@@ -12,15 +11,20 @@
         <div *ngIf="fallos > 3; else vacio" class="cross"></div>
         <div *ngIf="fallos > 4; else vacio" class="cross"></div>
     </div>
-    <button *ngIf="fallos>4 || this.auxbool" class="boton" (click)="replay()">REPLAY</button>
-    <button *ngIf="char.length != 0 && fallos<5; else vacio" class="boton" (click)="adivinarLetra(this.char)">ADIVINAR LETRA : {{char}}</button>
+    <div class="others">
+        <button mat-raised-button color="primary" *ngIf="fallos>4 || this.auxbool" class="boton" (click)="replay()">
+            REPLAY
+        </button>
+        <button mat-raised-button color="primary" *ngIf="char.length != 0 && fallos<5; else vacio" class="boton"
+            (click)="adivinarLetra(this.char)">
+            ADIVINAR {{char}}
+        </button>
+    </div>
     <div class="adivinar">
         <div class="letters" *ngIf="fallos < 5 && !auxbool; else vacio">
-            <app-ahorcado-letra class="letra" *ngFor="let char of abecedario"
-            [nombre]="char"
-            [imagen]="'../../assets/ahorcado/letras/' + char + '.png'"
-            (datos)="recibirLetra($event)"
-            ></app-ahorcado-letra>
+            <app-ahorcado-letra class="letra" *ngFor="let char of abecedario" [nombre]="char"
+                [imagen]="'../../assets/ahorcado/letras/' + char + '.png'"
+                (datos)="recibirLetra($event)"></app-ahorcado-letra>
         </div>
     </div>
 </div>

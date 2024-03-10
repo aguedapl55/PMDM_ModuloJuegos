@@ -1,4 +1,24 @@
+.main {
+  height: 100%;
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
 img {
-  display: block;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
   margin: auto;
+  padding-bottom: 5%;
+}
+
+.botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: slowrise 2s forwards;
 }

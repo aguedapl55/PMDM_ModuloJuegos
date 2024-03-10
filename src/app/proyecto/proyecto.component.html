@@ -1,14 +1,11 @@
-<h1>Proyecto de Angular: Juegos</h1>
-<p>Este trimestre hemos desarrollado los siguientes juegos. </p>
-<ul>
-    <li (click)="rutaPPS()">
-        <h2>Piedra, papel, tijeras</h2>
-        <p></p>
-    </li>
-    <li (click)="rutaTres()">
-        <h2>Tres en raya</h2>
-    </li>
-    <li (click)="rutaHanged()">
-        <h2>Ahorcado</h2>
-    </li>
-</ul>
+<div class="main">
+    <div class="title">
+        <h1>Proyecto de Angular: Juegos</h1>
+        <p>Este trimestre hemos desarrollado los siguientes juegos. </p>
+    </div>
+    <div class="games">
+        <h2 (click)="rutaHanged()">Ahorcado</h2>
+        <h2 (click)="rutaPPS()">Piedra, papel, tijeras</h2>
+        <h2 (click)="rutaTres()">Tres en raya</h2>
+    </div>
+</div>

@@ -1,23 +1,48 @@
 .main {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: lightgoldenrodyellow;
     width: 100vw;
 }
 
 .word {
+    padding-top: 50px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-    h1 {
-        padding: 50px;
-        font-size: 500%;
-        line-height: 75px;
-    }
+.word h1 {
+    font-size: 500%;
+}
+
+.respuesta {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 300%;
+    line-height: 75px;
+}
+
+.others {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 50px;
+    font-size: 200%;
+}
 
 .mistakes {
     display: flex;
@@ -27,28 +52,20 @@
     animation: slide_up 2s forwards;
 }
 
-    .cross {
-        width: 50px;
-        height: 50px;
-        background-image: url('../../assets/ahorcado/red-cross.png');
-        background-size: cover;
-    }
-
-.adivinar {
-    padding: 25px;
+.cross {
+    width: 50px;
+    height: 50px;
+    background-image: url('../../assets/ahorcado/red-cross.png');
+    background-size: cover;
 }
 
-    .boton {
-        font-size: 500%;
-    }
+.adivinar {
+    padding-bottom: 75px;
+}
 
-    .letters {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        overflow-x: scroll;
-    }
-
-        .letra {
-            margin-left: 25px;
-        }
+.letters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: scroll;
+}

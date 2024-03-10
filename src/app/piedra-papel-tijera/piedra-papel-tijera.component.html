@@ -38,7 +38,7 @@
             <div *ngIf="vidasM>0 || vidasP>0; else vacio" (click)="elegir('paper')" class="eleccion papel"></div>
             <div *ngIf="vidasM>0 || vidasP>0; else vacio" (click)="elegir('scissors')" class="eleccion tijeras"></div>
         </div>
-        <button *ngIf="vidasM<=0 || vidasP<=0; else vacio" (click)="replay()" class="replay">REPLAY</button>
+        <button mat-raised-button color="primary" *ngIf="vidasM<=0 || vidasP<=0; else vacio" (click)="replay()" class="replay">REPLAY</button>
         
     </div>
 

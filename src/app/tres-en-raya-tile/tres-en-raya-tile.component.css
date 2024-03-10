@@ -1,0 +1,10 @@
+button {
+    background-color: lightblue;
+    padding: 50px 60px;
+    border: solid 1px black;
+    font-size: 250%;
+}
+
+.available {
+    color: lightblue;
+}

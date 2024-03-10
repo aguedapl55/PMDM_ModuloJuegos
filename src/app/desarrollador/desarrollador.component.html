@@ -5,7 +5,7 @@
     </div>
     <div class="body">
         <div class="mainbody">
-            <div class="educform">
+            <div class="part educform">
                 <h2>Educación y formación</h2>
                 <div class="elemento educacion" *ngFor="let educ of listaEducForm">
                     <h3>{{educ.titulo}}</h3>
@@ -13,7 +13,7 @@
                     <p>{{educ.desc}}</p>
                 </div>
             </div>
-            <div class="cursos">
+            <div class="part cursos">
                 <h2>Cursos</h2>
                 <div class="elemento curso" *ngFor="let curs of listaCursos">
                     <h3>{{curs.titulo}}</h3>
@@ -22,18 +22,20 @@
             </div>
         </div>
         <div class="extras">
-            <div class="compdig">
+            <div class="part compdig">
                 <h2>Competencias digitales</h2>
-                <li class="elemento compdig" *ngFor="let cd of listaCompDig">{{cd}}</li>
+                <div>
+                    <p class="elemento competencia" *ngFor="let cd of listaCompDig">- {{cd}}</p>
+                </div>
             </div>
-            <div class="idiomas">
+            <div class="part idiomas">
                 <h2>Idiomas</h2>
                 <div class="elemento idioma" *ngFor="let id of listaIdiomas">
                     <h3>{{id.titulo}}</h3>
                     <h4>{{id.desc}}</h4>
                 </div>
             </div>
-            <div class="masinfo">
+            <div class="part masinfo">
                 <h2>Información adicional</h2>
                 <div class="elemento masinfo" *ngFor="let info of listaInfo">
                     <h3>{{info.titulo}}</h3>

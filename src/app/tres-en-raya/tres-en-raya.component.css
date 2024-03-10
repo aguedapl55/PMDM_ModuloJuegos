@@ -1,4 +1,5 @@
 .main {
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -11,21 +12,77 @@
     width: 200px;
     height: 200px;
     margin: 20px;
+    text-align: center;
 }
 
+    .player img {
+        width: 200px;
+        height: 200px;
+    }
+
     .usuario {
-        background-image: url('../../assets/tresenraya/user.png');
-        background-size: cover;
         animation: slide_left 2s forwards;
     }
 
     .maquina {
-        background-image: url('../../assets/tresenraya/bot.png');
-        background-size: cover;
         animation: slide_right 2s forwards;
     } 
+
+    .win {
+        animation: slide_up 1s forwards;
+    }
+
+    .drop {
+        animation: drop 1.5s forwards;
+    }
+
+.consola {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
 .tiles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+@keyframes slide_left {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0%;
+    } 100% {
+        transform: translate(150px, 0px);
+    }
+}
+
+@keyframes slide_right {
+    0% {
+        transform: translate(0px, 0px);
+        opacity: 0%;
+    } 100% {
+        transform: translate(-150px, 0px);
+    }
+}
+
+@keyframes slide_up {
+    0% {
+       opacity: 0%;
+    } 75% {
+        transform: translate(0%, 2vh);
+        opacity: 0%;
+    } 100% {
+
+    }
+}
+
+@keyframes drop {
+    0% {
+    } 25% {
+        transform: translate(0%, 1.5vh);
+        opacity: 0%;
+    } 100% {
+         opacity: 0%;
+ 
+     }
 }

@@ -1,20 +1,36 @@
 <div class="main">
-    <div class="player usuario">
-
+    <div *ngIf="who != 'O'; else dropU" class="player usuario">
+        <h1 class="win" *ngIf="who == 'X'; else vacio">WINNER!</h1>
+        <img src="../../assets/piedrapapeltijera/user.png">
     </div>
     <div class="consola">
         <div class="tiles">
             <app-tres-en-raya-tile class="tile" *ngFor="let c of tiles"
             [name]="c" [value]="values[c]" (datos)="recibirLetra($event)"></app-tres-en-raya-tile> 
         </div>
-        <h1 *ngIf="win; else vacio">{{winner}}</h1>
-        <button *ngIf="win" class="boton" (click)="replay()">REPLAY</button>
+        <button mat-raised-button color="primary" *ngIf="win" class="boton" (click)="replay()">REPLAY</button>
     </div>
-    <div class="player maquina">
-        
+    <div *ngIf="who != 'X'; else dropB" class="player maquina">
+        <h1 class="win" *ngIf="who == 'O'; else vacio">WINNER!</h1>
+        <h1 class="think" *ngIf="name != 9">...</h1>
+        <img src="../../assets/piedrapapeltijera/bot.png">
     </div>
 </div>
 
 <ng-template #vacio>
-    <div></div>
+    <div>
+        <h1> </h1>
+    </div>
+</ng-template>
+
+<ng-template #dropB>
+    <div class="player drop">
+        <img src="../../assets/piedrapapeltijera/bot.png">
+    </div>
+</ng-template>
+
+<ng-template #dropU>
+    <div class="player drop">
+        <img src="../../assets/piedrapapeltijera/user.png">
+    </div>
 </ng-template>
